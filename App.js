@@ -1,20 +1,52 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Categories from './pages/Categories';
+import Meals from './pages/Meals';
+import Details from './pages/Details';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Categories" component={Categories} options={{
+          title: 'Categories',
+          headerStyle: {
+            backgroundColor: 'white'
+          },
+          headerTitleStyle: {
+            fontSize: 20,
+            color: '#ff9933',
+            fontWeight: 'bold',
+          }
+        }} />
+        <Stack.Screen name="Meals" component={Meals} options={{
+          title: 'Meals',
+          headerStyle: {
+            backgroundColor: 'white'
+          },
+          headerTitleStyle: {
+            fontSize: 20,
+            color: '#ff9933',
+            fontWeight: 'bold',
+          },
+          headerTintColor: '#ff9933',
+        }} />
+        <Stack.Screen name="Details" component={Details} options={{
+          title: 'Details',
+          headerStyle: {
+            backgroundColor: 'white'
+          },
+          headerTitleStyle: {
+            fontSize: 20,
+            color: '#ff9933',
+            fontWeight: 'bold',
+          },
+          headerTintColor: '#ff9933',
+        }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
