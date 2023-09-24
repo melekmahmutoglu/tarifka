@@ -1,3 +1,4 @@
 # tarifka
 
-<iframe width="560" height="315" src="https://youtube.com/shorts/9MThpYsrfzY?feature=share" frameborder="0" allowfullscreen></iframe>
+https://github.com/melekmahmutoglu/tarifka/assets/85318885/c83dc4c2-11bc-4658-80be-9e535ef1dfed
+
